@@ -47,9 +47,17 @@
 *   **Lesson 9: CPI (跨程序调用)**
     *   **核心**: 乐高积木 —— 如何调用 System Program 转账。
     *   📂 代码: [`src/bin/lesson9.rs`](src/bin/lesson9.rs)
-*   **Lesson 10: PDA (程序派生地址)**
+*   **Lesson 10: PDA (Program Derived Addresses)**
     *   **核心**: Solana 的终极奥义。Seeds, Bump, 以及 `invoke_signed`.
     *   📂 代码: [`src/bin/lesson10.rs`](src/bin/lesson10.rs)
+
+### 💡 特别篇：前端交互 (Frontend Integration)
+> 目标：理解 Rust 写的合约怎么被 JS/TS 调用。
+
+*   **Lesson IDL: TypeScript 与 IDL 交互**
+    *   **核心**: `anchor.workspace`, `program.methods.rpc()`, `program.account.fetch()`.
+    *   📂 代码: [`src/bin/lesson_idl.ts`](src/bin/lesson_idl.ts)
+
 
 ---
 
