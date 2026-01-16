@@ -1,0 +1,18 @@
+# Anchor / Solana
+.anchor/
+target/
+
+# Node.js
+node_modules/
+*.log
+
+# Cargo
+Cargo.lock  # 可选，如果你不想提交 lock 文件
+
+# IDE
+.idea/
+*.iml
+
+# OS
+Thumbs.db
+.DS_Store
