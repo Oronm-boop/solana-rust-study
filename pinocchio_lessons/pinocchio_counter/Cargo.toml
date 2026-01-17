@@ -1,0 +1,22 @@
+[package]
+name = "pinocchio_counter"
+version = "0.1.0"
+edition = "2021"
+
+# 1. 关键配置：定义为动态库 (cdylib) 才能被编译成 .so (BPF)
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+# 2. 引入 Pinocchio 核心库
+# (注意：版本号可能会更新，这里使用一个常用版本)
+pinocchio = "0.6" 
+
+[profile.release]
+# 3. 极致优化配置
+opt-level = 3
+lto = "fat"            # Link Time Optimization
+codegen-units = 1
+panic = "abort"        # 移除 panic 的 unwind 逻辑，大幅减小体积
+overflow-checks = false # 移除溢出检查 (自行负责！)
+strip = true           # 移除 debug info
